@@ -25,13 +25,11 @@ class StatusesControllerTest < ActionController::TestCase
   end
 
   test "deberia mostrar la nueva pagina cuando inicio sesion" do
-    sign_in users(:ojala)
     get :new
     assert_response :success
   end
 
   test "should create status" do
-    sign_in users(:ojala)
     assert_difference('Status.count') do
       post :create, status: { contenido: @status.contenido }
     end

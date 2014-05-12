@@ -4,6 +4,7 @@ class Status < ActiveRecord::Base
 
 
 	validates :contenido, presence: true,
-						  lenght: { minimum: 2 }
+						  length: { minimum: 2 }
+
 	validates :user_id, presence: true	
 end
